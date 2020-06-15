@@ -35,6 +35,15 @@ public class FizzBuzzTest {
         assertThat(num,is("Buzz"));
     }
     @Test
+    public void should_return_Whizz_when_given_7 () {
+        //given
+        FizzBuzz fizzBuzz=new FizzBuzz();
+        //when
+        String num=fizzBuzz.say(7);
+        //then
+        assertThat(num,is("Whizz"));
+    }
+    @Test
     public void should_return_FizzBuzz_when_given15 () {
         //given
         FizzBuzz fizzBuzz=new FizzBuzz();
@@ -42,5 +51,32 @@ public class FizzBuzzTest {
         String num=fizzBuzz.say(15);
         //then
         assertThat(num,is("FizzBuzz"));
+    }
+    @Test
+    public void should_return_FizzBuzz_when_given21 () {
+        //given
+        FizzBuzz fizzBuzz=new FizzBuzz();
+        //when
+        String num=fizzBuzz.say(21);
+        //then
+        assertThat(num,is("FizzWhizz"));
+    }
+    @Test
+    public void should_return_FizzBuzz_when_given35 () {
+        //given
+        FizzBuzz fizzBuzz=new FizzBuzz();
+        //when
+        String num=fizzBuzz.say(35);
+        //then
+        assertThat(num,is("BuzzWhizz"));
+    }
+    @Test
+    public void should_return_FizzBuzz_when_given105() {
+        //given
+        FizzBuzz fizzBuzz=new FizzBuzz();
+        //when
+        String num=fizzBuzz.say(105);
+        //then
+        assertThat(num,is("FizzBuzzWhizz"));
     }
 }
