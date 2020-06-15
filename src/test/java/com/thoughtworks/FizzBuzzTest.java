@@ -17,12 +17,30 @@ public class FizzBuzzTest {
         assertThat(num,is("1"));
     }
     @Test
-    public void should_return_3_when_given_3 () {
+    public void should_return_Fizz_when_given_3 () {
         //given
         FizzBuzz fizzBuzz=new FizzBuzz();
         //when
         String num=fizzBuzz.say(3);
         //then
         assertThat(num,is("Fizz"));
+    }
+    @Test
+    public void should_return_Buzz_when_given_5 () {
+        //given
+        FizzBuzz fizzBuzz=new FizzBuzz();
+        //when
+        String num=fizzBuzz.say(5);
+        //then
+        assertThat(num,is("Buzz"));
+    }
+    @Test
+    public void should_return_FizzBuzz_when_given15 () {
+        //given
+        FizzBuzz fizzBuzz=new FizzBuzz();
+        //when
+        String num=fizzBuzz.say(15);
+        //then
+        assertThat(num,is("FizzBuzz"));
     }
 }
