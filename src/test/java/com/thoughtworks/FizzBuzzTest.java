@@ -16,4 +16,13 @@ public class FizzBuzzTest {
         //then
         assertThat(num,is("1"));
     }
+    @Test
+    public void should_return_3_when_given_3 () {
+        //given
+        FizzBuzz fizzBuzz=new FizzBuzz();
+        //when
+        String num=fizzBuzz.say(3);
+        //then
+        assertThat(num,is("Fizz"));
+    }
 }
