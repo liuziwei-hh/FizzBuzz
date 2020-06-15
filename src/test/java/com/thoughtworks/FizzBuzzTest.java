@@ -97,4 +97,13 @@ public class FizzBuzzTest {
         //then
         assertThat(num,is("Fizz"));
     }
+    @Test
+    public void should_return_BuzzWhizz_when_given35() {
+        //given
+        FizzBuzz fizzBuzz=new FizzBuzz();
+        //when
+        String num=fizzBuzz.say(35);
+        //then
+        assertThat(num,is("BuzzWhizz"));
+    }
 }

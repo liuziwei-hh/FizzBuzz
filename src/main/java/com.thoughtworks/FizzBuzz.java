@@ -7,7 +7,13 @@ public class FizzBuzz {
         boolean IsDividedBy5 = i % 5 == 0;
         boolean IsDividedBy7 = i % 7 == 0;
         String word="";
-        if(DoesContainThree(i)){
+        if(DoesContainFive(i)&&DoesContainThree(i)){
+            word="Buzz";
+        }
+        if (IsDividedBy7) {
+          return word+="Whizz";
+        }
+        if(DoesContainThree(i)&&!DoesContainFive(i)){
             return "Fizz" ;
          }
         if (IsDividedBy3) {
@@ -17,9 +23,6 @@ public class FizzBuzz {
         if (IsDividedBy5) {
             word+="Buzz";
         }
-        if (IsDividedBy7) {
-            word+="Whizz";
-        }
         if(""==word){
             word+=String.valueOf(i);
         }
@@ -27,6 +30,9 @@ public class FizzBuzz {
     }
     public boolean DoesContainThree(int i) {
         return String.valueOf(i).contains("3");
+    }
+    public boolean DoesContainFive(int i) {
+        return String.valueOf(i).contains("5");
     }
 
 }
