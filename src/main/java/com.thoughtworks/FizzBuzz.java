@@ -6,27 +6,19 @@ public class FizzBuzz {
         boolean IsDevidedBy3 = i % 3 == 0;
         boolean IsDevidedBy5 = i % 5 == 0;
         boolean IsDevidedBy7 = i % 7 == 0;
-        if (IsDevidedBy3 && IsDevidedBy5&&IsDevidedBy7) {
-            return "FizzBuzzWhizz";
-        }
-        if (IsDevidedBy3 && IsDevidedBy7) {
-            return "FizzWhizz";
-        }
-        if (IsDevidedBy5 && IsDevidedBy7) {
-            return "BuzzWhizz";
-        }
-        if (IsDevidedBy3 && IsDevidedBy5) {
-            return "FizzBuzz";
-        }
+        String word="";
         if (IsDevidedBy3) {
-            return "Fizz";
+             word+="Fizz";
         }
         if (IsDevidedBy5) {
-            return "Buzz";
+            word+="Buzz";
         }
         if (IsDevidedBy7) {
-            return "Whizz";
+            word+="Whizz";
         }
-        return String.valueOf(i);
+        if(""==word){
+            word+=String.valueOf(i);
+        }
+        return word;
     }
 }
