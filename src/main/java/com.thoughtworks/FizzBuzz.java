@@ -3,17 +3,21 @@ package com.thoughtworks;
 public class FizzBuzz {
 
     public String say(int i) {
-        boolean IsDevidedBy3 = i % 3 == 0;
-        boolean IsDevidedBy5 = i % 5 == 0;
-        boolean IsDevidedBy7 = i % 7 == 0;
+        boolean IsDividedBy3 = i % 3 == 0;
+        boolean IsDividedBy5 = i % 5 == 0;
+        boolean IsDividedBy7 = i % 7 == 0;
         String word="";
-        if (IsDevidedBy3) {
+        if(DoesContainThree(i)){
+            return "Fizz" ;
+         }
+        if (IsDividedBy3) {
              word+="Fizz";
         }
-        if (IsDevidedBy5) {
+
+        if (IsDividedBy5) {
             word+="Buzz";
         }
-        if (IsDevidedBy7) {
+        if (IsDividedBy7) {
             word+="Whizz";
         }
         if(""==word){
@@ -21,4 +25,8 @@ public class FizzBuzz {
         }
         return word;
     }
+    public boolean DoesContainThree(int i) {
+        return String.valueOf(i).contains("3");
+    }
+
 }
